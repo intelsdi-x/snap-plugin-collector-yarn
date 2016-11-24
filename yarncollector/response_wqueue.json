@@ -1,0 +1,14 @@
+{  
+   "scheduler":{  
+      "schedulerInfo":{  
+         "capacity":100.0,
+         "maxCapacity":100.0,
+         "queueName":"root",
+         "queues":{  
+
+         },
+         "type":"capacityScheduler",
+         "usedCapacity":0.0
+      }
+   }
+}
