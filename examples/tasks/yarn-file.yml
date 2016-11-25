@@ -1,0 +1,35 @@
+--- 
+max-failures: 10
+schedule: 
+  interval: 1s
+  type: simple
+version: 1
+workflow: 
+  collect: 
+    metrics: 
+      /intel/yarn/queue/*/absolutecapacity: {}
+      /intel/yarn/queue/*/absolutemaxcapacity: {}
+      /intel/yarn/queue/*/absoluteusedcapacity: {}
+      /intel/yarn/queue/*/capacity: {}
+      /intel/yarn/queue/*/maxactiveapplications: {}
+      /intel/yarn/queue/*/maxactiveapplicationsperuser: {}
+      /intel/yarn/queue/*/maxapplications: {}
+      /intel/yarn/queue/*/maxapplicationsperuser: {}
+      /intel/yarn/queue/*/maxcapacity: {}
+      /intel/yarn/queue/*/numactiveapplications: {}
+      /intel/yarn/queue/*/numapplications: {}
+      /intel/yarn/queue/*/numcontainers: {}
+      /intel/yarn/queue/*/numpendingapplications: {}
+      /intel/yarn/queue/*/resources_memory: {}
+      /intel/yarn/queue/*/resources_vcores: {}
+      /intel/yarn/queue/*/usedcapacity: {}
+      /intel/yarn/queue/*/usedresources: {}
+      /intel/yarn/queue/*/userlimit: {}
+      /intel/yarn/queue/*/userlimitfactor: {}
+      /intel/yarn/schedulerinfo/capacity: {}
+      /intel/yarn/schedulerinfo/maxcapacity: {}
+    publish: 
+      - 
+        config: 
+          file: /tmp/yarn_metrics
+        plugin_name: file
